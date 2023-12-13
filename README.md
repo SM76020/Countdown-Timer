@@ -44,9 +44,6 @@ To run the Countdown Timer locally, follow these steps:
 1. Open the Countdown Timer in your web browser.
 2. Set the desired countdown duration using the input fields.
 3. Click the "Start" button to begin the countdown.
-4. Use the "Pause" button to temporarily stop the countdown.
-5. Click the "Reset" button to restart the countdown with the original duration.
-
 ## Contributing
 
 If you'd like to contribute to this project, please follow these steps:
