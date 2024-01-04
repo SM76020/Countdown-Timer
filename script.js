@@ -28,9 +28,26 @@ function startCountdown() {
       Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60)),
       Math.floor((timeRemaining % (1000 * 60)) / 1000),
     ];
+    let displayString = '';
 
-    document.getElementById('timer').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-
+    if (days > 0) {
+      displayString += `${days}Day `;
+    }
+  
+    if (hours > 0) {
+      displayString += `${hours}Hour `;
+    }
+  
+    if (minutes > 0) {
+      displayString += `${minutes}Minute `;
+    }
+  
+    if (seconds > 0 || displayString === '') {
+      displayString += `${seconds}Second`;
+    }
+  
+    document.getElementById('timer').innerHTML = displayString;
+  
     if (timeRemaining <= 0) {
       clearInterval(timerInterval);
       displayMessage('Time Expired!');
